@@ -40,19 +40,21 @@ print("\n")
 
 #4 Write a function to calculate power of a number raised to other ( a^b ) using recursion	
 
-b = int(input("enter a base: "))
-p = int(input("enter a power: "))
-def power(x,y):
-	return x**y
-print(power(b,p))
+def power (n,p):
+	s = 1
+	if (p ==1):
+		return n 
+	else:
+		s = n*power(n,p-1)
+		return s
+print(power(5,3))		
+		
 print("\n")			
 	
 	
 
-#Q5 Write a function to calculate power of a number raised to other ( a^b ) using recursion
-
-a = int(input("enter a base: "))
-b = int(input("enter a base: "))	
+#Q5 Write a function to find factorial of a number but also store the factorials calculated in a dictionary
+	
 def fact (x):
 	if x==1:
 		return 1
